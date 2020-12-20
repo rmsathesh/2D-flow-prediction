@@ -7,7 +7,7 @@ import tqdm
 import tensorflow as tf
 import matplotlib.pyplot as plt
 #%%
-fpath = r'D:\study\ANN\CNN\projects\steady state flow'
+fpath = r'\..\steady state flow'
 fname = os.path.join(fpath, 'train.tfrecords')
 
 #%%
@@ -142,8 +142,8 @@ def optimizer(total_loss, global_step, learning_rate=0.01):
 #%%
 def train(fname, batch_size=8, epochs=1):
     
-    fpath = r'D:\study\ANN\CNN\projects\steady state flow\graph'
-    mpath = r'D:\study\ANN\CNN\projects\steady state flow\model'
+    fpath = r'\..\steady state flow\graph'
+    mpath = r'\..\steady state flow\model'
     
     
     with tf.variable_scope('main'):
@@ -216,7 +216,7 @@ import glob
 
 
 #%%
-test_files = glob.glob('D:\study\ANN\CNN\projects\steady state flow\computed_car_flow/*/')
+test_files = glob.glob('\..\steady state flow\computed_car_flow/*/')
 #%%
 def test_boundary(fname):
     file = h5py.File(fname, 'r')
@@ -234,7 +234,7 @@ def test_velocity(fname):
 
 
 #%%
-mpath = r'D:\study\ANN\CNN\projects\steady state flow\model'
+mpath = r'\..\steady state flow\model'
 with tf.Graph().as_default():
     
     with tf.variable_scope('main'):
