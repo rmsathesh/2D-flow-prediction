@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Dec  7 21:44:12 2020
-
-@author: hp
-"""
-
-
 import numpy as np
 import os
 import sys
@@ -154,7 +146,7 @@ def train(fname, batch_size=8, epochs=1):
     mpath = r'D:\study\ANN\CNN\projects\steady state flow\model'
     
     
-    with tf.variable_scope('train'):
+    with tf.variable_scope('main'):
     
         global_step = tf.Variable(initial_value=1, trainable=False)
         
@@ -245,7 +237,7 @@ def test_velocity(fname):
 mpath = r'D:\study\ANN\CNN\projects\steady state flow\model'
 with tf.Graph().as_default():
     
-    with tf.variable_scope('train'):
+    with tf.variable_scope('main'):
         bound = tf.placeholder(dtype=tf.float32, shape=[1, 128, 256, 1])
         vel_test_pred = model(bound)
         var_list = tf.trainable_variables()
