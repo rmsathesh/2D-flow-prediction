@@ -11,4 +11,6 @@ DATASET:
   
  MODEL ARCHITECTURE:
  
- 
+ ![](images/architecture.PNG)
+
+RESULTS:
